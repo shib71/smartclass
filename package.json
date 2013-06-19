@@ -1,6 +1,6 @@
 {
-  "name": "class",
-  "version": "0.0.0",
+  "name": "smartclass",
+  "version": "0.0.1",
   "description": "Easy class creation",
   "main": "index.js",
   "directories": {
@@ -15,7 +15,7 @@
   "devDependencies": {
     "tap": "*"
   },
-  "repository": "",
+  "repository": "https://github.com/shib71/smartclass",
   "author": "Blair McKenzie",
   "license": "BSD"
 }
