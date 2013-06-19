@@ -1,0 +1,21 @@
+{
+  "name": "class",
+  "version": "0.0.0",
+  "description": "Easy class creation",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "dependencies": {
+    "Q": "*"
+  },
+  "devDependencies": {
+    "tap": "*"
+  },
+  "repository": "",
+  "author": "Blair McKenzie",
+  "license": "BSD"
+}
