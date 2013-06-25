@@ -15,7 +15,15 @@
   "devDependencies": {
     "tap": "*"
   },
-  "repository": "https://github.com/shib71/smartclass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shib71/smartclass"
+  },
   "author": "Blair McKenzie",
-  "license": "BSD"
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "95d5b6ce4fda75598c79b2f62960d7095fd3ed98",
+  "bugs": {
+    "url": "https://github.com/shib71/smartclass/issues"
+  }
 }
