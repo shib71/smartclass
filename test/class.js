@@ -81,7 +81,28 @@ test("base smartclass",function(t){
 
     t.end();
   });
+  
+  test("extend smartclass with a set/get property",function(t){
+    t.plan(1);
 
+    var getsetclass = smartclass.extendWith("GetSetClass",{
+      testprop : {
+        get : function(){
+          return this._testprop;
+        },
+        set : function(v){
+          this._testprop = v * 5;
+        }
+      }
+    });
+    
+    var instanceZ = new getsetclass();
+    instanceZ.testprop = 12;
+    t.equal(instanceZ.testprop,60,"getsetclass get and set worked");
+
+    t.end();
+  });
+  
   test("extend smartclass with two parents",function(t){
     t.plan(11);
 

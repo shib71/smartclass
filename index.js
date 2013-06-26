@@ -56,7 +56,16 @@ baseclass.extendWith = function extendWith(){
     }
     else{
       for (var k in args[i]){
-        if (baseclass.metaprops.indexOf(k)===-1){
+        if (baseclass.metaprops.indexOf(k)===-1 && typeof(args[i][k])==="object" && args[i][k].get && args[i][k].set){
+          // getter / setter property
+          Object.defineProperty(fnResult.prototype,k,{
+            get : args[i][k].get,
+            set : args[i][k].set,
+            enumerable : !args[i].unenumerable || args[i].unenumerable.indexOf(k)===-1
+          });
+        }
+        else if (baseclass.metaprops.indexOf(k)===-1) {
+          // value property
           Object.defineProperty(fnResult.prototype,k,{
             value : args[i][k],
             enumerable : !args[i].unenumerable || args[i].unenumerable.indexOf(k)===-1,
