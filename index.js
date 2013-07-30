@@ -19,7 +19,7 @@ baseclass.extendWith = function extendWith(){
 
   var fnResult = function(){
     var val = "";
-
+    
     self.apply(this,arguments);
 
     for (var i=0, ii=args.length; i<ii; i++){
@@ -106,7 +106,7 @@ Object.defineProperty(baseclass.prototype,"keys",{
 });
 
 
-function ify(obj,fn,promisify){
+baseclass.ify = ify = function(obj,fn,promisify){
   var _fn = fn;
 
   if (typeof(fn)!=="function")
@@ -160,7 +160,7 @@ function ify(obj,fn,promisify){
   return _fn;
 }
 
-function deepResolve(val){
+baseclass.deepResolve = deepResolve = function(val){
     var queue = [];
 
     if (val && val.constructor == Array){
