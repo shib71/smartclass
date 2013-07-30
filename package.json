@@ -1,6 +1,6 @@
 {
   "name": "smartclass",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Easy class creation",
   "main": "index.js",
   "directories": {
