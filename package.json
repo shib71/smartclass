@@ -10,7 +10,8 @@
     "test": "tap ./test"
   },
   "dependencies": {
-    "q": "*"
+    "q": "*",
+    "deepresolve": "*"
   },
   "devDependencies": {
     "tap": "*"
